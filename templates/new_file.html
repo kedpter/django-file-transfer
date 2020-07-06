@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block stylesheet %}
+    <link href="{% static 'css/new_file.css' %}" type="text/css" rel="stylesheet"/>
+{% endblock %}
+
+{% block breadcrumb %}
+    <li class="breadcrumb-item"><a href="{% url 'home' %}">Files</a></li>
+    <li class="breadcrumb-item active">Upload file</li>{% endblock %}
+
+{% block content %}
+    <form action="{% url 'new_file' %}" method="post" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        {% include 'includes/form.html' %}
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static 'js/dropzone.js' %}"></script>
+    <script src="{% static 'js/new_file.js' %}"></script>
+{% endblock %}
+

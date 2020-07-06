@@ -1,0 +1,10 @@
+db.sqlite3
+.DS_Store
+.tag*
+.idea
+django-beginners-guide
+
+__pycache__
+*.pyc
+
+media/*
