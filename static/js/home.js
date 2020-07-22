@@ -8,6 +8,6 @@ $(document).ready(function(){
 
 
     $(".delete").click(function(){
-        $(".deleteform").submit(); // Submit the form
+        $(this).closest("form").submit(); // Submit the form
     });
 });

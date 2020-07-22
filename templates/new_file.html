@@ -12,7 +12,7 @@
 
 {% block content %}
     <form action="{% url 'new_file' %}" method="post" enctype="multipart/form-data" novalidate>
-        {% csrf_token %}
+{#        {% csrf_token %}#}
         {% include 'includes/form.html' %}
         <button type="submit" class="btn btn-success">Submit</button>
     </form>
